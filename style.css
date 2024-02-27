@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9ce2c;
+}
+.game-title{
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-shadow: 5px 2px 3px #bf211e5b;
+    padding-bottom: 20px;
+}
+@keyframes moveUpDown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+.turn{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: rgb(75, 75, 75);
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+.row{
+    display: flex;
+}
+
+.cell:hover{
+    background-color: #bf211e;
+}
+.reset{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #bf211e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.reset:hover{
+        transform: scale(0.9);
+        transition: 0.3s;
+        box-shadow: 2px 2px 2px white;
+}
+.win{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px #bf211e;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    animation: moveUpDown 2s infinite;
+    position: absolute;
+    top: 20px;
+}
